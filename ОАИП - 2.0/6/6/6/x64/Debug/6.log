@@ -1,0 +1,5 @@
+﻿  6.cpp
+C:\Users\ASUS\Desktop\ЛАБЫ\ОАИП - 2.0\6\6\6.cpp(139,8): warning C4101: p: неиспользованная локальная переменная
+C:\Users\ASUS\Desktop\ЛАБЫ\ОАИП - 2.0\6\6\6.cpp(140,6): warning C4101: number: неиспользованная локальная переменная
+C:\Users\ASUS\Desktop\ЛАБЫ\ОАИП - 2.0\6\6\6.cpp(92,1): warning C4715: delet: значение возвращается не при всех путях выполнения
+  6.vcxproj -> C:\Users\ASUS\Desktop\ЛАБЫ\ОАИП - 2.0\6\6\x64\Debug\6.exe

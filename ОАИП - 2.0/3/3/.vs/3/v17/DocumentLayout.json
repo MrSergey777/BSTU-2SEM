@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\3\\3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{623F5F26-161E-4B6C-8FE8-941FD52BB696}|..\\3-2\\3-2.vcxproj|C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\3\\3-2\\3-2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A105E8D-1437-4276-A7C9-793640EC43A1}|3.vcxproj|C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\3\\3\\3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6A105E8D-1437-4276-A7C9-793640EC43A1}|3.vcxproj|solutionrelative:3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "3-2.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\3\\3-2\\3-2.cpp",
+              "RelativeDocumentMoniker": "..\\3-2\\3-2.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\3\\3-2\\3-2.cpp",
+              "RelativeToolTip": "..\\3-2\\3-2.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-11T21:04:13.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "3.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\3\\3\\3.cpp",
+              "RelativeDocumentMoniker": "3.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\3\\3\\3.cpp",
+              "RelativeToolTip": "3.cpp",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-11T20:35:56.809Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

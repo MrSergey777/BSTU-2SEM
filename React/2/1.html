@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock Component</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+  <script type="text/babel">
+    class Clock extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          time: this.getCurrentTime(),
+        };
+      }
+
+      getCurrentTime() {
+        const { format = '24', timezone } = this.props;
+        const now = new Date();
+        const localTime = new Date(now.toLocaleString('en-US', { timeZone: timezone }));
+
+        const hours = format === '12' 
+          ? localTime.getHours() % 12 || 12 
+          : localTime.getHours();
+        const minutes = localTime.getMinutes().toString().padStart(2, '0');
+        const seconds = localTime.getSeconds().toString().padStart(2, '0');
+        const period = format === '12' ? (localTime.getHours() >= 12 ? 'PM' : 'AM') : '';
+
+        return `${hours}:${minutes}:${seconds} ${period}`;
+      }
+
+      render() {
+        return (
+          <div>
+            <h1>{this.state.time}</h1>
+          </div>
+        );
+      }
+    }
+
+    const App = () => (
+      <div>
+        <Clock format='24' timezone='Europe/Minsk' />
+        <Clock format='12' timezone='America/New_York' />
+      </div>
+    );
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
+

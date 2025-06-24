@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\9\\9\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DC9E970C-C206-46B5-813F-38D1BF3F6AC9}|..\\9-\u0434\u043E\u043F-1\\9-\u0434\u043E\u043F-1.vcxproj|C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\9\\9-\u0434\u043E\u043F-1\\9-\u0434\u043E\u043F-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD991CCE-F67B-438A-B6C7-2AE4884E29E7}|9.vcxproj|C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\9\\9\\9.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AD991CCE-F67B-438A-B6C7-2AE4884E29E7}|9.vcxproj|solutionrelative:9.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD991CCE-F67B-438A-B6C7-2AE4884E29E7}|9.vcxproj|C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\9\\9\\9.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{AD991CCE-F67B-438A-B6C7-2AE4884E29E7}|9.vcxproj|solutionrelative:9.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "9.txt",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\9\\9\\9.txt",
+              "RelativeDocumentMoniker": "9.txt",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\9\\9\\9.txt",
+              "RelativeToolTip": "9.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAACQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-11T06:59:42.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "9-\u0434\u043E\u043F-1.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\9\\9-\u0434\u043E\u043F-1\\9-\u0434\u043E\u043F-1.cpp",
+              "RelativeDocumentMoniker": "..\\9-\u0434\u043E\u043F-1\\9-\u0434\u043E\u043F-1.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\9\\9-\u0434\u043E\u043F-1\\9-\u0434\u043E\u043F-1.cpp",
+              "RelativeToolTip": "..\\9-\u0434\u043E\u043F-1\\9-\u0434\u043E\u043F-1.cpp",
+              "ViewState": "AQIAAMYAAAAAAAAAAAAAACAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-03T19:11:56.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "9.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\9\\9\\9.cpp",
+              "RelativeDocumentMoniker": "9.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\\u041B\u0410\u0411\u042B\\\u041E\u0410\u0418\u041F - 2.0\\9\\9\\9.cpp",
+              "RelativeToolTip": "9.cpp",
+              "ViewState": "AQIAAEUBAAAAAAAAAAAAAA8BAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-03T18:46:24.846Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

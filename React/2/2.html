@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Menu Component</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+  <script type="text/babel">
+    class JobSelector extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          selectedJob: 'developer',
+        };
+      }
+
+      handleChange = (event) => {
+        this.setState({ selectedJob: event.target.value });
+        this.props.onJobChange(event.target.value);
+      }
+
+      render() {
+        return (
+          <div>
+            <h2>Выберите профессию:</h2>
+            <select value={this.state.selectedJob} onChange={this.handleChange}>
+              <option value="developer">Разработчик</option>
+              <option value="designer">Дизайнер</option>
+              <option value="teacher">Учитель</option>
+              <option value="doctor">Врач</option>
+              <option value="lawyer">Юрист</option>
+            </select>
+          </div>
+        );
+      }
+    }
+
+    class JobMenu extends React.Component {
+      getLinksForJob(job) {
+        const links = {
+          developer: [
+            { name: 'GitHub', url: 'https://github.com/' },
+            { name: 'Stack Overflow', url: 'https://stackoverflow.com/' },
+            { name: 'MDN Web Docs', url: 'https://developer.mozilla.org/' },
+            { name: 'CSS-Tricks', url: 'https://css-tricks.com/' },
+            { name: 'Hacker News', url: 'https://news.ycombinator.com/' },
+            { name: 'Codecademy', url: 'https://www.codecademy.com/' },
+            { name: 'FreeCodeCamp', url: 'https://www.freecodecamp.org/' },
+          ],
+          designer: [
+            { name: 'Behance', url: 'https://www.behance.net/' },
+            { name: 'Dribbble', url: 'https://dribbble.com/' },
+            { name: 'Adobe', url: 'https://www.adobe.com/' },
+            { name: 'Awwwards', url: 'https://www.awwwards.com/' },
+            { name: 'Canva', url: 'https://www.canva.com/' },
+            { name: '99designs', url: 'https://99designs.com/' },
+            { name: 'Designspiration', url: 'https://www.designspiration.com/' },
+          ],
+          teacher: [
+            { name: 'Khan Academy', url: 'https://www.khanacademy.org/' },
+            { name: 'Edutopia', url: 'https://www.edutopia.org/' },
+            { name: 'Coursera', url: 'https://www.coursera.org/' },
+            { name: 'TeachThought', url: 'https://www.teachthought.com/' },
+            { name: 'TES', url: 'https://www.tes.com/' },
+            { name: 'edX', url: 'https://www.edx.org/' },
+            { name: 'National Geographic Education', url: 'https://www.nationalgeographic.org/education/' },
+          ],
+          doctor: [
+            { name: 'WebMD', url: 'https://www.webmd.com/' },
+            { name: 'Mayo Clinic', url: 'https://www.mayoclinic.org/' },
+            { name: 'Medscape', url: 'https://www.medscape.com/' },
+            { name: 'PubMed', url: 'https://pubmed.ncbi.nlm.nih.gov/' },
+            { name: 'Healthline', url: 'https://www.healthline.com/' },
+            { name: 'NIH', url: 'https://www.nih.gov/' },
+            { name: 'MedlinePlus', url: 'https://medlineplus.gov/' },
+          ],
+          lawyer: [
+            { name: 'FindLaw', url: 'https://www.findlaw.com/' },
+            { name: 'Justia', url: 'https://www.justia.com/' },
+            { name: 'Nolo', url: 'https://www.nolo.com/' },
+            { name: 'ABA Journal', url: 'https://www.abajournal.com/' },
+            { name: 'HG.org', url: 'https://www.hg.org/' },
+            { name: 'Law.com', url: 'https://www.law.com/' },
+            { name: 'LegalZoom', url: 'https://www.legalzoom.com/' },
+          ],
+        };
+
+        return links[job] || [];
+      }
+
+      render() {
+        const links = this.getLinksForJob(this.props.selectedJob);
+
+        return (
+          <div>
+            <h2>Полезные ссылки для {this.props.selectedJob}:</h2>
+            <ul>
+              {links.map(link => (
+                <li key={link.name}>
+                  <a href={link.url} target="_blank">{link.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+    }
+
+    class App extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          selectedJob: 'developer',
+        };
+      }
+
+      handleJobChange = (job) => {
+        this.setState({ selectedJob: job });
+      }
+
+      render() {
+        return (
+          <div>
+            <JobSelector onJobChange={this.handleJobChange} />
+            <JobMenu selectedJob={this.state.selectedJob} />
+          </div>
+        );
+      }
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
