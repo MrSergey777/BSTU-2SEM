@@ -1,0 +1,257 @@
+/* Base styles (оставляем существующие стили) */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+/* Main container */
+.buy-container {
+  background-color: rgba(248, 248, 248, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+/* Header section */
+.store-header {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 6px 22px rgba(219, 30, 30, 0.03);
+  width: 100%;
+  padding: 3px 56px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 40px 100px;
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.header-content {
+  font-family: JetBrains Mono, -apple-system, Roboto, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.store-logo {
+  aspect-ratio: 0.93;
+  object-fit: contain;
+  object-position: center;
+  width: 79px;
+  flex-shrink: 0;
+}
+
+.store-name {
+  margin: 0;
+  flex-grow: 1;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+/* User and product section */
+.user-product-section {
+  margin-top: 44px;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.user-profile {
+  width: 36%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.username {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0;
+}
+
+.user-avatar {
+  width: 100%;
+  aspect-ratio: 1.05;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 50%;
+  margin-top: 49px;
+}
+
+.product-offer {
+  width: 64%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.offer-text {
+  color: rgba(0, 0, 0, 1);
+  font-size: 40px;
+  font-family: "JetBrains Mono", -apple-system, Roboto, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: center;
+  margin: 0;
+}
+
+.offer-label {
+  font-weight: 500;
+}
+
+/* Новый блок цены */
+.price-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 40px;
+}
+
+.price-text .offer-label,
+.price-text .product-price {
+  margin-right: 10px;
+}
+
+/* Contacts section (оставляем без изменений) */
+.contacts-heading {
+  color: rgba(0, 0, 0, 1);
+  font-size: 40px;
+  font-family: "JetBrains Mono", -apple-system, Roboto, Helvetica, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 39px;
+}
+
+.contacts-section {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  margin-top: 84px;
+}
+
+.contacts-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  width: 100%;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.contact-icon {
+  width: 191px;
+  aspect-ratio: 1.09;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+  max-width: 100%;
+  flex-grow: 0 !important;
+}
+
+
+/* Footer section */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 159px;
+  padding: 1px 55px 29px 55px;
+  background-color: rgba(255,255,255,1);
+}
+
+.footer-divider {
+  width: 100%;
+  aspect-ratio: 500;
+  object-fit: contain;
+  object-position: center;
+  align-self: start;
+}
+
+.privacy-policy {
+  margin-top: 25px;
+}
+/* Медиа-запрос для адаптации под экран шириной до 500px */
+@media screen and (max-width: 500px) {
+  .header-content {
+    gap: 10px; /* Уменьшаем еще для мобильных */
+  }
+  .content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .user-profile,
+  .product-offer {
+    width: 100%;
+    margin-left: 0;
+  }
+  .store-header {
+    padding: 10px;
+    gap: 20px !important;
+    flex-wrap: wrap;
+  }
+  .store-name,
+  .username {
+    font-size: 28px;
+  }
+  .offer-text,
+  .price-text {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    padding: 0 10px;
+    justify-content: flex-start;
+  }
+  /* Уменьшаем основную картинку (логотип) */
+  .store-logo {
+    width: 60px;
+  }
+  /* Центрируем и увеличиваем иконки контактов */
+  .contacts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+  .contact-icon {
+    width: 120px !important;
+    flex-grow: 0 !important;
+    max-width: none !important;
+  }
+  .user-avatar {
+    width: 200px; /* Фиксированный размер для мобилок */
+    max-width: 70%; /* Не больше 70% ширины экрана */
+    margin-top: 20px; /* Уменьшаем отступ сверху */
+    aspect-ratio: 1; /* Делаем идеальный круг */
+  }
+  
+  .user-profile {
+    align-items: center; /* Центрируем аватар */
+    padding: 0 15px; /* Добавляем отступы по бокам */
+  }
+}
+

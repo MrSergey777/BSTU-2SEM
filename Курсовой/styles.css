@@ -1,0 +1,394 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, Roboto, Helvetica, sans-serif;
+  }
+  
+  /* Main container */
+  .main-container {
+    background-color: rgba(248, 248, 248, 1);
+    overflow: hidden;
+  }
+  
+  .content-wrapper {
+    margin-left: 13px;
+  }
+  
+  @media (max-width: 991px) {
+    .content-wrapper {
+      max-width: 100%;
+    }
+  }
+  
+  /* Two column layout */
+  .two-column-layout {
+    gap: 20px;
+    display: flex;
+  }
+  /* Sidebar */
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    line-height: normal;
+    width: 18%;
+    margin-left: 0px;
+  }
+  .sidebar-content {
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    margin-top: 10px;
+    padding-left: 12px;
+    padding-right: 1px;
+    padding-top: 25px;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .sidebar-title {
+    color: rgba(25, 25, 25, 1);
+    font-size: 22px;
+    font-family:
+      Playfair Display,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    align-self: start;
+    margin-left: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .game-menu {
+    border-radius: 14px;
+    background-color: rgba(243, 244, 245, 1);
+    z-index: 10;
+    display: flex;
+    margin-top: 35px;
+    padding-left: 17px;
+    padding-right: 45px;
+    padding-top: 18px;
+    padding-bottom: 1400px;
+    flex-direction: column;
+    align-items: start;
+    font-family:
+      Inter,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .game-category-title {
+    color: rgba(25, 25, 25, 1);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .game-list {
+    margin-top: 41px;
+    margin-bottom: -354px;
+    min-height: 635px;
+    color: rgba(114, 130, 153, 1);
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .game-item {
+    margin-top: 18px;
+  }
+  
+  .game-item:first-child {
+    margin-top: 0;
+  }
+  .game-menu a {
+    color: inherit; /* Наследует цвет текста от родителя */
+    text-decoration: none; /* Убирает подчеркивание */
+    display: block; /* Занимает всю доступную ширину */
+    width: 100%;
+  }
+
+  .game-menu a:hover {
+    text-decoration: underline; /* Добавляет подчеркивание при наведении */
+    /* Или любой другой желаемый эффект при наведении */
+  }
+  /* Main content */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    line-height: normal;
+    width: 82%;
+    margin-left: 20px;
+  }
+  
+  
+  .content-box {
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 1);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-bottom: 286px;
+    margin-top: 10px;
+  }
+  
+
+  /* Header */
+  .site-header {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 6px 22px rgba(219, 30, 30, 0.03);
+    width: 100%;
+    padding: 3px 56px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 40px 100px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 500;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .site-logo {
+    aspect-ratio: 0.93;
+    object-fit: contain;
+    object-position: center;
+    width: 80px;
+    flex-shrink: 0;
+  }
+  
+  .site-title {
+    font-size: 36px;
+    font-family: JetBrains Mono, -apple-system, Roboto, Helvetica, sans-serif;
+    line-height: 1;
+    flex-grow: 1;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0;
+    
+  }
+  /* Catalog section */
+  .catalog-section {
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 80px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .catalog-title {
+    color: rgba(25, 25, 25, 1);
+    font-size: 22px;
+    font-family:
+      Playfair Display,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    align-self: start;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  /* Product rows */
+  .product-row {
+    margin-top: 77px;
+  }
+  .product-row:nth-child(3) {
+    margin-top: 77px;
+  }
+  .product-row:nth-child(4) {
+    margin-top: 83px;
+  }
+  .product-row:nth-child(5) {
+    margin-top: 78px;
+    margin-left: 11px;
+  }
+  .product-row:nth-child(6) {
+    margin-top: 110px;
+    margin-left: 11px;
+  }
+  .product-row:nth-child(7) {
+    margin-top: 85px;
+    margin-left: 11px;
+  }
+  .product-grid {
+    gap: 20px;
+    display: flex;
+  }
+  .product-column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    line-height: normal;
+    width: 33%;
+    margin-left: 0px;
+  }
+  
+  .product-column:not(:first-child) {
+    margin-left: 20px;
+  }
+  .product-image {
+    aspect-ratio: 0.79;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 14px;
+    flex-grow: 1;
+  }
+  .product-row:nth-child(4) .product-column:nth-child(3) .product-image {
+    margin-top: 9px;
+  }
+  /* Footer */
+  /* Задаем черный фон для корневого элемента */
+ /* Сброс внутренних отступов и установка фиксированной высоты */
+ .site-footer {
+  background-color: black;      /* черный фон футера */
+  text-align: center;           /* центрирование содержимого */
+  padding: 0 10px;              /* убраны вертикальные отступы */
+  height: 40px;                 /* фиксированная высота футера */
+  box-sizing: border-box;       /* учет padding внутри высоты */
+  margin: 0;
+}
+
+.site-footer object.footer-object {
+  display: block;
+  width: 100%;
+  height: 40px !important;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* Обновлённый стиль для элемента privacy_policy */
+privacy_policy {
+  display: block;
+  text-align: center;                              /* выравнивание текста по центру */
+  color: white;                                    /* белый цвет текста */
+  font-size: 14px;                                 /* размер шрифта */
+  line-height: 40px;                               /* выравнивание по высоте футера */
+  font-family: 'Playfair Display', serif;         /* тот же шрифт, что и в header */
+  margin: 0 auto;
+}
+  /* Адаптипность для телефона */
+  @media (max-width: 500px) {
+    
+    /* Исправляем порядок элементов */
+    .two-column-layout {
+      display: flex !important;
+      flex-direction: column;
+    }
+  
+    /* Сайдбар */
+    .sidebar {
+      order: -1; /* Перемещаем в начало */
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  
+    /* Меню игр */
+    .game-menu {
+      padding-bottom: 20px !important;
+      margin-top: 15px !important;
+      margin-bottom: 0 !important;
+    }
+  
+    /* Основной контент */
+    .main-content {
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+  
+    /* Преобразуем каталог в единую сетку карточек */
+    .catalog-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px; /* Увеличенное расстояние между карточками */
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0;
+      margin-top: 20px !important;
+      justify-items: stretch; /* Ячейки растягиваются на всю доступную ширину */
+    }
+  
+    /* Заголовок каталога адаптируется и занимает всю ширину сетки */
+    .catalog-section > .catalog-title {
+      grid-column: 1 / -1;
+    }
+    /* «Удаляем» промежуточные обёртки, чтобы карточки становились непосредственными потомками каталога */
+    .product-row,
+    .product-grid {
+      display: contents;
+    }
+  
+    /* Карточки теперь занимают всю ячейку сетки */
+    .product-column {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  
+    /* Шапка */
+    .site-header {
+      padding: 10px !important;
+    }
+  
+    .site-title {
+      font-size: 16px !important;
+      white-space: normal !important;
+    }
+  
+    /* Общие правки */
+    .content-wrapper {
+      padding: 0 10px !important;
+      margin-left: 0 !important;
+    }
+  
+    .game-list {
+      columns: 2 !important;
+      margin-top: 20px !important;
+    }
+  
+    .content-box {
+      padding-bottom: 30px !important; /* Было 286px */
+    }
+  
+    /* Футер */
+    privacy_policy {
+      font-size: 12px;
+      line-height: normal;
+      padding: 5px 0;
+    }
+    /* Структура main и body */
+    .main-container,
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+  }
+  

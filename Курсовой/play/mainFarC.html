@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Store - магазин цифровых товаров</title>
+    <link rel="stylesheet" href="stylesplay.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Inter:wght@400;500&family=JetBrains+Mono&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="container">
+        <!-- Модальное окно -->
+        <div id="sellModal" class="modal">
+            <div class="modal-content">
+                <form id="sellForm">
+                    <div class="form-group">
+                        <label>Описание:</label>
+                        <input type="text" id="description" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Имя продавца:</label>
+                        <input type="text" id="seller" required>
+                    </div>
+                    <div class="form-group">
+                        <label>telegram:</label>
+                        <!-- Изменён id на contactTelegram -->
+                        <input type="text" id="contactTelegram" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Watsapp:</label>
+                        <!-- Изменён id на contactWhatsapp -->
+                        <input type="text" id="contactWhatsapp" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <!-- Изменён id на contactEmail -->
+                        <input type="text" id="contactEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Цена (₽):</label>
+                        <input type="number" id="price" required>
+                    </div>
+                    <div class="modal-buttons">
+                        <button type="button" onclick="closeModal()">Отмена</button>
+                        <button type="submit">Добавить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <header class="site-header">
+            <img src="C:\Users\ASUS\Desktop\Курсовой\play\Фото play\logo.png" alt="Logo" class="logo">
+            <h1 class="site-title">Pixel Store - магазин цифровых товаров</h1>
+        </header>
+
+        <main class="main-content">
+            <img src="C:\Users\ASUS\Desktop\Курсовой\play\Фото play\FARCRY.jpg" alt="Fortnite" class="banner-image">
+
+            <section class="products-table">
+                <header class="table-header">
+                    <h2 class="column-title description-title">Описание</h2>
+                    <h2 class="column-title seller-title">Продавец</h2>
+                    <h2 class="column-title price-title">Цена</h2>
+                    <button onclick="openModal()" class="column-title sell-title"><h2>Продать</h2></button>
+                </header>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <svg class="footer-svg" width="1354" height="74" viewBox="0 0 1354 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+            </svg>
+        </footer>
+    </div>
+
+    <script>
+        function openModal() {
+          document.getElementById('sellModal').style.display = 'flex';
+        }
+    
+        function closeModal() {
+          document.getElementById('sellModal').style.display = 'none';
+          document.getElementById('sellForm').reset();
+        }
+    
+        // При отправке формы собираем все данные и создаём кликабельное предложение
+        document.getElementById('sellForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+      
+          // Получаем данные
+          const description = document.getElementById('description').value;
+          const seller = document.getElementById('seller').value;
+          const contactTelegram = document.getElementById('contactTelegram').value;
+          const contactWhatsapp = document.getElementById('contactWhatsapp').value;
+          const contactEmail = document.getElementById('contactEmail').value;
+          const price = document.getElementById('price').value + '₽';
+      
+          // Формируем URL для целевой страницы с передачей параметров
+          const targetUrl = `seller.html?description=${encodeURIComponent(description)}&seller=${encodeURIComponent(seller)}&price=${encodeURIComponent(price)}&telegram=${encodeURIComponent(contactTelegram)}&whatsapp=${encodeURIComponent(contactWhatsapp)}&email=${encodeURIComponent(contactEmail)}`;
+      
+          // Создаем контейнер предложения
+          const newProduct = document.createElement('article');
+          newProduct.className = 'product-item';
+          newProduct.innerHTML = `
+            <p class="product-description">${description}</p>
+            <p class="product-seller">${seller}</p>
+            <p class="product-price">${price}</p>
+          `;
+      
+          // Оборачиваем предложение в ссылку
+          const link = document.createElement('a');
+          link.href = targetUrl;
+          // Сброс стилей, чтобы ссылка не влияла на внешний вид (наследуем стили)
+          link.style.textDecoration = 'none';
+          link.style.color = 'inherit';
+          link.style.display = 'block';
+      
+          link.appendChild(newProduct);
+      
+          // Добавляем новое предложение на страницу
+          document.querySelector('.products-table').appendChild(link);
+      
+          closeModal();
+        });
+    
+        // Закрытие модального окна при клике вне его содержимого
+        window.onclick = function(event) {
+          const modal = document.getElementById('sellModal');
+          if (event.target === modal) {
+            closeModal();
+          }
+        };
+    </script>
+</body>
+</html>

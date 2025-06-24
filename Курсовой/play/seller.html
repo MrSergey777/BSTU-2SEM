@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Store - магазин цифровых товаров</title>
+  <link rel="stylesheet" href="sellerr.css">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Inter:wght@400;500&family=JetBrains+Mono&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+  <div class="buy-container">
+    <header class="store-header">
+      <div class="header-content">
+        <img src="C:\Users\ASUS\Desktop\Курсовой\play\Фото play\logo.png" class="store-logo" />
+        <h1 class="store-name">Pixel Store - магазин цифровых товаров</h1>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="user-product-section">
+        <div class="content-wrapper">
+          <article class="user-profile">
+            <h2 class="username">bolen777</h2>
+            <!-- Используем только аватар, имя продавца уже выведено выше -->
+            <img src="C:\Users\ASUS\Desktop\Курсовой\play\Фото play\useravatsr.png" class="user-avatar" />
+          </article>
+
+          <article class="product-offer">
+            <!-- Блок с предложением -->
+            <p class="offer-text">
+              <span class="offer-label">Предложение:</span><br />
+              <span class="offer-title">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis a, sunt iste quidem, nemo illo dolorum consequatur iusto explicabo dolorem ex unde magni est ipsum perferendis dignissimos, expedita sequi cumque?
+              </span>
+            </p>
+            <!-- Блок с ценой -->
+            <p class="price-text">
+              <span class="offer-label">Цена:</span>
+              <span class="product-price"></span>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <h2 class="contacts-heading">Контакты</h2>
+
+      <section class="contacts-section">
+        <div class="contacts-wrapper">
+          <div class="contact-item">
+            <a id="contactLinkTelegram" href="#">
+              <img src="C:\Users\ASUS\Desktop\Курсовой\play\Фото play\ТГ.png" class="contact-icon" />
+            </a>
+          </div>
+          <div class="contact-item">
+            <a id="contactLinkWhatsapp" href="#">
+              <img src="C:\Users\ASUS\Desktop\Курсовой\play\Фото play\WA.png" class="contact-icon" />
+            </a>
+          </div>
+          <div class="contact-item">
+            <a id="contactLinkEmail" href="#">
+              <img src="C:\Users\ASUS\Desktop\Курсовой\play\Фото play\Email.png" class="contact-icon" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img src="C:\Users\ASUS\Desktop\Курсовой\play\Фото play\Priv.svg" class="footer-divider" alt="Divider" />
+      <p class="privacy-policy">Политика конфиденциальности</p>
+    </footer>
+  </div>
+
+  <script>
+    // Функция для извлечения параметров из URL
+    function getQueryParams() {
+      const params = {};
+      const queryString = window.location.search.substring(1);
+      const queries = queryString.split("&");
+      queries.forEach(function(part) {
+        const [key, value] = part.split("=");
+        params[key] = decodeURIComponent(value);
+      });
+      return params;
+    }
+    
+    const params = getQueryParams();
+    
+    // Подставляем имя продавца в заголовок
+    if (params.seller) {
+      document.querySelector('.username').textContent = params.seller;
+    }
+    
+    // Подставляем описание вместо заготовленного предложения
+    if (params.description) {
+      document.querySelector('.offer-title').textContent = params.description;
+    }
+    
+    // Подставляем цену рядом со словом "Цена:"
+    if (params.price) {
+      document.querySelector('.product-price').textContent = params.price;
+    }
+    
+    // Устанавливаем ссылки на контакты
+    if (params.telegram) {
+      document.getElementById('contactLinkTelegram').href = params.telegram;
+    }
+    if (params.whatsapp) {
+      document.getElementById('contactLinkWhatsapp').href = params.whatsapp;
+    }
+    if (params.email) {
+      document.getElementById('contactLinkEmail').href = params.email;
+    }
+  </script>
+</body>
+</html>
